@@ -4,7 +4,8 @@
         "id": "001",
         "login": "Reigen",
         "password": "qwerty123",
-        "registered": 0
+        "registered_at": "2013-09-05",
+        "role_id": 0
     }
     ],
     "roles": [
