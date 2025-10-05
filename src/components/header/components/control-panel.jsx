@@ -1,32 +1,57 @@
 import styled from 'styled-components';
 import { Icon } from '../../icon/icon';
 import { Link, useNavigate } from 'react-router-dom';
+import { Button } from '../../button/button';
+import { ROLE } from '../../../constants/role';
+import { selectUser } from '../../../selectors/select-user';
+import { useDispatch, useSelector } from 'react-redux';
+import { logout } from '../../../actions';
 
 const RightAligned = styled.div`
 	display: flex;
 	justify-content: flex-end;
 `;
 
-const StyledLink = styled(Link)`
+const UserLoginContainer = styled.div`
 	display: flex;
-	justify-content: flex-end;
+	align-items: center;
 	font-size: 18px;
-	width: 100px;
-	height: 32px;
+	font-weight: bold;
 `;
 
 const ControlPanelContainer = ({ className }) => {
+	const { login, roleId, session } = useSelector(selectUser);
+
+	const dispatch = useDispatch();
 	const navigate = useNavigate();
+
+	const onLogoutButtonClick = () => {
+		dispatch(logout(session));
+	};
 	return (
 		<div className={className}>
 			<RightAligned>
-				<StyledLink to="login">Войти</StyledLink>
+				{roleId === ROLE.GUEST ? (
+					<Button>
+						<Link to="/login">Войти</Link>
+					</Button>
+				) : (
+					<UserLoginContainer>
+						<div>{login}</div>
+						<Icon
+							id="fa-sign-out"
+							margin="0 0 0 10px"
+							cursor="pointer"
+							onClick={onLogoutButtonClick}
+						/>
+					</UserLoginContainer>
+				)}
 			</RightAligned>
 			<RightAligned>
 				<Icon
 					id="fa-backward"
 					margin="10px 0 0 0"
-					navigate={navigate}
+					onClick={() => navigate(-1)}
 					cursor="pointer"
 				/>
 				<Link to="/posts">

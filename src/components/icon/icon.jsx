@@ -2,8 +2,8 @@ import styled from 'styled-components';
 
 // id указывает какой тип иконки будет использоваться, size и margin применятся в стилях
 // пропсы передаются через компонент Icon
-const IconContainer = ({ className, id, navigate }) => (
-	<div className={className} onClick={() => navigate(-1)}>
+const IconContainer = ({ className, id, onClick }) => (
+	<div className={className} onClick={onClick}>
 		<i className={`fa ${id}`} aria-hidden="true"></i>
 	</div>
 );
