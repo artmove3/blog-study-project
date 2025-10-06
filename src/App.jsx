@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Header } from './components/header/header.jsx';
 import { Footer } from './components/footer/footer.jsx';
 import { Authorization } from './pages/authorization/authorization.jsx';
+import { Registration } from './pages/registration/registration.jsx';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -26,7 +27,7 @@ function App() {
 				<Routes>
 					<Route path="/" element={<div>Главная страница</div>} />
 					<Route path="/login" element={<Authorization />} />
-					<Route path="/register" element={<div>Регистрация</div>} />
+					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<div>Пользователи</div>} />
 					<Route path="/posts" element={<div>Новая статья</div>} />
 					<Route path="/posts/:postId" element={<div>Статья</div>} />

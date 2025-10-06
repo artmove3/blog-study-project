@@ -7,11 +7,11 @@ export const createUser = (regLogin, regPassword) => {
 			'Content-Type': 'application/json;charset=utf-8',
 		},
 		body: JSON.stringify({
-			id: Date.now(),
+			id: String(Date.now()),
 			login: regLogin,
 			password: regPassword,
 			registered_at: getDate(),
 			role_id: 2,
 		}),
-	});
+	}).then((response) => response.json());
 };
