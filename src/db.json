@@ -12,32 +12,18 @@
       "login": "Mob",
       "password": "1qa2ws3ed",
       "registered_at": "2025-10-06 13:47",
-      "role_id": 2
-    },
-    {
-      "id": "1759758802399",
-      "login": "dwad",
-      "password": "1qa2ws3ed",
-      "registered_at": "2025-10-06 13:53",
-      "role_id": 2
-    },
-    {
-      "id": "1759758905582",
-      "login": "aaaaaaw",
-      "password": "1q2w3e4",
-      "registered_at": "2025-10-06 13:55",
-      "role_id": 2
-    },
-    {
-      "id": "1759759247603",
-      "login": "weeeeee3",
-      "password": "1q2w3e4",
-      "registered_at": "2025-10-06 14:00",
-      "role_id": 2
+      "role_id": 1
     },
     {
       "id": "1759760212631",
       "login": "Mob4",
+      "password": "1qa2ws3ed",
+      "registered_at": "2025-10-06 14:16",
+      "role_id": 1
+    },
+    {
+      "id": "175976012312312",
+      "login": "dawdaw",
       "password": "1qa2ws3ed",
       "registered_at": "2025-10-06 14:16",
       "role_id": 2

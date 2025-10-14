@@ -4,6 +4,7 @@ import { Header } from './components/header/header.jsx';
 import { Footer } from './components/footer/footer.jsx';
 import { Authorization } from './pages/authorization/authorization.jsx';
 import { Registration } from './pages/registration/registration.jsx';
+import { UsersPage } from './pages/users-page/users-page.jsx';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -15,7 +16,7 @@ const AppColumn = styled.div`
 	margin: 0 auto;
 `;
 
-const Content = styled.div`
+const Page = styled.div`
 	padding: 120px 0;
 `;
 
@@ -23,17 +24,17 @@ function App() {
 	return (
 		<AppColumn>
 			<Header />
-			<Content>
+			<Page>
 				<Routes>
 					<Route path="/" element={<div>Главная страница</div>} />
 					<Route path="/login" element={<Authorization />} />
 					<Route path="/register" element={<Registration />} />
-					<Route path="/users" element={<div>Пользователи</div>} />
+					<Route path="/users" element={<UsersPage />} />
 					<Route path="/posts" element={<div>Новая статья</div>} />
 					<Route path="/posts/:postId" element={<div>Статья</div>} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
-			</Content>
+			</Page>
 			<Footer />
 		</AppColumn>
 	);

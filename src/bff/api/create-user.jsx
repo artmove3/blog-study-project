@@ -1,4 +1,4 @@
-import { getDate } from './get-date';
+import { getDate } from '../utils/get-date';
 
 export const createUser = (regLogin, regPassword) => {
 	return fetch('http://localhost:3004/users', {
