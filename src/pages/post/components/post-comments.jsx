@@ -1,0 +1,71 @@
+import { useState } from 'react';
+import styled from 'styled-components';
+import { Icon } from '../../../components/icon/icon';
+import { Comment } from './comment';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectUser } from '../../../selectors/select-user';
+import { addCommentAsync } from '../../../actions/add-comment-async';
+import { useServerRequest } from '../../../hooks/use-server-request';
+
+const PostCommentsContainer = ({ className, postId, comments }) => {
+	const [newComment, setNewComment] = useState('');
+
+	const userName = useSelector(selectUser).login;
+	const dispatch = useDispatch();
+	const requestServer = useServerRequest();
+	const onNewCommentAdd = (postId, userName, content) => {
+		content && dispatch(addCommentAsync(requestServer, postId, userName, content));
+		setNewComment('');
+	};
+
+	return (
+		<div className={className}>
+			<div className="new-comment">
+				<textarea
+					value={newComment}
+					onChange={({ target }) => setNewComment(target.value)}
+					placeholder="Комментарий..."
+				></textarea>
+				<Icon
+					id="fa-paper-plane-o"
+					margin="0 0 0 10px"
+					cursor="pointer"
+					size="21px"
+					onClick={() => onNewCommentAdd(postId, userName, newComment)}
+				/>
+			</div>
+
+			<div className="comments">
+				{comments.map((commentProps) => {
+					return (
+						<Comment
+							key={commentProps.id}
+							id={commentProps.id}
+							commentProps={commentProps}
+						/>
+					);
+				})}
+			</div>
+		</div>
+	);
+};
+
+export const PostComments = styled(PostCommentsContainer)`
+	width: 580px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+
+	.new-comment {
+		display: flex;
+		width: 100%;
+		margin: 20px 0 0;
+	}
+
+	.new-comment textarea {
+		width: 100%;
+		height: 120px;
+		resize: none;
+		font-size: 18px;
+	}
+`;

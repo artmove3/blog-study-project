@@ -61,7 +61,10 @@ const AuthorizationContainer = ({ className }) => {
 				setServerError(`Ошибка запроса: ${error}`);
 				return;
 			}
+			// добавляем юзера в redux
 			dispatch(setUser(res));
+			// добавляем юзера в sessionStorage браузера
+			sessionStorage.setItem('userData', JSON.stringify(res));
 		});
 	};
 	const formError = errors?.login?.message || errors?.password?.message;

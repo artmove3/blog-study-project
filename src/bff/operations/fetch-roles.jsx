@@ -6,7 +6,9 @@ export const fetchRoles = async (userSessionHash) => {
 	// при проверке доступа сама операция знает, каким ролям доступ разрешен
 	const accessRoles = [ROLE.ADMIN];
 
-	if (!sessions.access(userSessionHash, accessRoles)) {
+	const access = await sessions.access(userSessionHash, accessRoles);
+
+	if (!access) {
 		return {
 			error: 'Доступ запрещен.',
 			res: null,

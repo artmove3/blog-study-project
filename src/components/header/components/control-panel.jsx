@@ -26,7 +26,10 @@ const ControlPanelContainer = ({ className }) => {
 	const navigate = useNavigate();
 
 	const onLogoutButtonClick = () => {
+		// удаление юзера из redux и из списка сессий
 		dispatch(logout(session));
+		// удаление юзера из sessionStorage браузера
+		sessionStorage.removeItem('userData');
 	};
 	return (
 		<div className={className}>

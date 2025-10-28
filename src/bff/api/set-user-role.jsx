@@ -1,4 +1,4 @@
-export const setUserRole = (userId, newUserRoleId) => {
+export const setUserRole = async (userId, newUserRoleId) => {
 	return fetch(`http://localhost:3004/users/${userId}`, {
 		method: 'PATCH',
 		headers: {

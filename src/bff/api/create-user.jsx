@@ -1,6 +1,6 @@
 import { getDate } from '../utils/get-date';
 
-export const createUser = (regLogin, regPassword) => {
+export const createUser = async (regLogin, regPassword) => {
 	return fetch('http://localhost:3004/users', {
 		method: 'POST',
 		headers: {
