@@ -1,2 +1,2 @@
 export const getDate = () =>
-	new Date(Date.now()).toISOString().substring(0, 16).replace('T', ' ');
+	new Date().toLocaleString().substring(0, 17).replace(',', '');

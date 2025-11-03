@@ -5,9 +5,9 @@ import { ROLE } from '../constants/role';
 import { sessions } from '../sessions';
 
 export const addComment = async (userSessionHash, postId, userName, content) => {
-	const acсessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.USER];
+	const accessRoles = [ROLE.ADMIN, ROLE.MODERATOR, ROLE.USER];
 
-	const access = await sessions.access(userSessionHash, acсessRoles);
+	const access = await sessions.access(userSessionHash, accessRoles);
 
 	if (!access) {
 		return {

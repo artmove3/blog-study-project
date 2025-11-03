@@ -3,4 +3,5 @@ export const transformComments = (dbPostComments) => ({
 	userName: dbPostComments.user_name,
 	content: dbPostComments.content,
 	publishedAt: dbPostComments.published_at,
+	id: dbPostComments.id,
 });

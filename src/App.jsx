@@ -9,6 +9,7 @@ import { Post } from './pages/post/post.jsx';
 import { useLayoutEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { setUser } from './actions/set-user.jsx';
+import { Modal } from './components/modal/modal.jsx';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -53,10 +54,12 @@ function App() {
 					<Route path="/users" element={<UsersPage />} />
 					<Route path="/posts" element={<div>Новая статья</div>} />
 					<Route path="/posts/:id" element={<Post />} />
+					<Route path="/posts/:id/edit" element={<Post />} />
 					<Route path="*" element={<div>Ошибка</div>} />
 				</Routes>
 			</Page>
 			<Footer />
+			<Modal />
 		</AppColumn>
 	);
 }
