@@ -9,3 +9,4 @@ export * from './remove-comment';
 export * from './remove-user';
 export * from './update-user-role';
 export * from './add-comment';
+export * from './save-post';

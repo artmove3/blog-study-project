@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/icon';
 
-const SpecialPanelContainer = ({ className, iconId, publishedAt }) => {
+const SpecialPanelContainer = ({ className, iconId, publishedAt, onClick }) => {
 	return (
 		<div className={className}>
 			<div className="published-at">
@@ -20,7 +20,7 @@ const SpecialPanelContainer = ({ className, iconId, publishedAt }) => {
 					margin="0 10px 0 0"
 					cursor="pointer"
 					size="21px"
-					onClick={() => {}}
+					onClick={onClick}
 				/>
 				<Icon id="fa-trash-o" cursor="pointer" size="21px" onClick={() => {}} />
 			</div>
