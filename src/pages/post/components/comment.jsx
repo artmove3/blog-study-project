@@ -17,9 +17,9 @@ const CommentContainer = ({ className, id, commentProps }) => {
 				text: 'Удалить комментарий?',
 				onConfirm: () => {
 					dispatch(removeCommentAsync(requestServer, id, postId));
-					dispatch(closeModal);
+					dispatch(closeModal());
 				},
-				onCancel: () => dispatch(closeModal),
+				onCancel: () => dispatch(closeModal()),
 			}),
 		);
 		// dispatch(removeCommentAsync(requestServer, id, postId));
@@ -31,21 +31,20 @@ const CommentContainer = ({ className, id, commentProps }) => {
 				<div className="information-panel">
 					<div className="author">
 						<Icon
+							inActive={true}
 							id="fa-user-circle-o"
 							cursor="pointer"
 							size="21px"
 							margin="0 5px 0 0"
-							onClick={() => {}}
 						/>
 						{userName}
 					</div>
 					<div className="published-at">
 						<Icon
+							inActive={true}
 							id="fa-calendar-o"
-							cursor="pointer"
 							size="21px"
 							margin="0 5px 0 0"
-							onClick={() => {}}
 						/>
 						{publishedAt}
 					</div>

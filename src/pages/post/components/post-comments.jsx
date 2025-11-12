@@ -29,7 +29,6 @@ const PostCommentsContainer = ({ className, postId, comments }) => {
 				<Icon
 					id="fa-paper-plane-o"
 					margin="0 0 0 10px"
-					cursor="pointer"
 					size="21px"
 					onClick={() => onNewCommentAdd(postId, userName, newComment)}
 				/>

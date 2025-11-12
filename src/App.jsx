@@ -41,7 +41,7 @@ function App() {
 				roleId: Number(currentUserData.roleId),
 			}),
 		);
-	}, []);
+	}, [dispatch]);
 
 	return (
 		<AppColumn>
@@ -52,7 +52,7 @@ function App() {
 					<Route path="/login" element={<Authorization />} />
 					<Route path="/register" element={<Registration />} />
 					<Route path="/users" element={<UsersPage />} />
-					<Route path="/posts" element={<div>Новая статья</div>} />
+					<Route path="/posts" element={<Post />} />
 					<Route path="/posts/:id" element={<Post />} />
 					<Route path="/posts/:id/edit" element={<Post />} />
 					<Route path="*" element={<div>Ошибка</div>} />

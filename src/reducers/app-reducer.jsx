@@ -27,7 +27,6 @@ export const appReducer = (state = initialAppState, action) => {
 				},
 			};
 		case ACTION_TYPE.CLOSE_MODAL:
-			console.log('CLOSE_MODAL');
 			return {
 				...state,
 				modal: {

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 
 const PostContentContainer = ({ className, post }) => {
 	const { id, title, imageUrl, content, publishedAt } = post;
+
 	const navigate = useNavigate();
 
 	const onEditButtonClick = () => navigate(`/posts/${id}/edit`);
@@ -14,6 +15,7 @@ const PostContentContainer = ({ className, post }) => {
 			<img src={imageUrl} alt={title} />
 			<H2>{title}</H2>
 			<SpecialPanel
+				postId={id}
 				iconId="fa-pencil-square-o"
 				onClick={onEditButtonClick}
 				publishedAt={publishedAt}
