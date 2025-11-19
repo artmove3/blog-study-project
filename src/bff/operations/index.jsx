@@ -11,3 +11,4 @@ export * from './update-user-role';
 export * from './add-comment';
 export * from './save-post';
 export * from './remove-post';
+export * from './fetch-posts';
