@@ -5,12 +5,14 @@ import { Link } from 'react-router-dom';
 const PostCardContainer = ({ className, props }) => {
 	const { id, title, imageUrl, publishedAt, commentCount } = props;
 
+	const croppedTitle = title.length > 30 ? title.substring(0, 30) + '...' : title;
+
 	return (
 		<div className={className}>
 			<Link to={`posts/${id}`}>
 				<img src={imageUrl} alt={title} />
 				<div className="post-card-footer">
-					<h4>{title}</h4>
+					<h4>{croppedTitle}</h4>
 					<div className="post-card-info">
 						<div className="published-at">
 							<Icon
@@ -40,6 +42,7 @@ const PostCardContainer = ({ className, props }) => {
 export const PostCard = styled(PostCardContainer)`
 	display: flex;
 	flex-direction: column;
+	justify-content: space-between;
 	width: 280px;
 	margin: 20px;
 	border: 1px solid #000;
@@ -61,6 +64,7 @@ export const PostCard = styled(PostCardContainer)`
 		display: flex;
 		justify-content: space-between;
 		margin-top: 5px;
+		line-height: 22px;
 	}
 
 	.published-at {

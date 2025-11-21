@@ -11,4 +11,5 @@ const ButtonContainer = ({ children, className, ...props }) => {
 export const Button = styled(ButtonContainer)`
 	font-size: 18px;
 	width: ${({ width = '100%' }) => width};
+	cursor: ${({ disabled }) => (disabled ? 'default' : 'pointer')};
 `;

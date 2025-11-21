@@ -19,7 +19,6 @@ a {
 
 body {
   margin: 0 auto;
-  /* display: flex; */
   min-width: 320px;
   background-color: #535bf2;
 }
