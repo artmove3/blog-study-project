@@ -18,7 +18,7 @@ const PostCardContainer = ({ className, props }) => {
 							<Icon
 								id="fa-calendar-o"
 								margin="0 10px 0 0"
-								font-size="18px"
+								size="18px"
 								inActive={true}
 							/>
 							{publishedAt}
@@ -27,7 +27,7 @@ const PostCardContainer = ({ className, props }) => {
 							<Icon
 								id="fa-comment-o"
 								margin="0 10px 0 0"
-								font-size="18px"
+								size="18px"
 								inActive={true}
 							/>
 							{commentCount}
