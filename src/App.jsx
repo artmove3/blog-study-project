@@ -11,6 +11,7 @@ import { useDispatch } from 'react-redux';
 import { setUser } from './actions/set-user.jsx';
 import { Modal } from './components/modal/modal.jsx';
 import { MainPage } from './pages/main/main-page.jsx';
+import { Error } from './components/error/error.jsx';
 
 const AppColumn = styled.div`
 	display: flex;
@@ -57,7 +58,10 @@ function App() {
 					<Route path="/posts" element={<Post />} />
 					<Route path="/posts/:id" element={<Post />} />
 					<Route path="/posts/:id/edit" element={<Post />} />
-					<Route path="*" element={<div>Ошибка</div>} />
+					<Route
+						path="*"
+						element={<Error error={'Такая страница не существует'} />}
+					/>
 				</Routes>
 			</Page>
 			<Footer />

@@ -25,6 +25,6 @@ export const sessions = {
 	async access(hash, accessRoles) {
 		// const user = this.list[hash];
 		const session = await getSession(hash);
-		return !!session.user && accessRoles.includes(session.user.roleId);
+		return !!session?.user && accessRoles.includes(session.user.roleId);
 	},
 };

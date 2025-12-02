@@ -4,16 +4,24 @@ import { UserRow } from './components/user-row';
 import { TableRow } from './components/table-row';
 import { useServerRequest } from '../../hooks/use-server-request';
 import { useEffect, useState } from 'react';
-import { Content } from '../../components/content/content';
+import { PrivateContent } from '../../components/private-content/private-content';
 import { ROLE } from '../../constants/role';
+import { checkAccess } from '../../utils/check-access';
+import { useSelector } from 'react-redux';
+import { selectUser } from '../../selectors/select-user';
 
 const UsersPageContainer = ({ className }) => {
 	const requestServer = useServerRequest();
 	const [roles, setRoles] = useState([]);
 	const [users, setUsers] = useState([]);
 	const [errorMessage, setErrorMessage] = useState('');
+	const userRole = useSelector(selectUser).roleId;
 
 	useEffect(() => {
+		if (!checkAccess([ROLE.ADMIN], userRole)) {
+			return;
+		}
+
 		Promise.all([requestServer('fetchUsers'), requestServer('fetchRoles')]).then(
 			([usersRes, rolesRes]) => {
 				if (usersRes.error || rolesRes.error) {
@@ -25,16 +33,19 @@ const UsersPageContainer = ({ className }) => {
 				setRoles(rolesRes.res);
 			},
 		);
-	}, [requestServer]);
+	}, [requestServer, userRole]);
 
 	const onDeleteUserButtonClick = (userId) => {
+		if (checkAccess([ROLE.ADMIN], userRole)) {
+			return;
+		}
 		requestServer('removeUser', userId).then(() => {
 			setUsers((prevUsers) => prevUsers.filter((user) => user.id !== userId));
 		});
 	};
 
 	return (
-		<Content error={errorMessage}>
+		<PrivateContent access={[ROLE.ADMIN]} serverError={errorMessage}>
 			<div className={className}>
 				<H2>Пользователи</H2>
 				<div className="table-container">
@@ -55,7 +66,7 @@ const UsersPageContainer = ({ className }) => {
 					})}
 				</div>
 			</div>
-		</Content>
+		</PrivateContent>
 	);
 };
 
