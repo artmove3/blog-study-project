@@ -5,10 +5,12 @@ import { removeCommentAsync } from '../../../actions/remove-comment-async';
 import { useServerRequest } from '../../../hooks/use-server-request';
 import { openModal } from '../../../actions/open-modal';
 import { closeModal } from '../../../actions/close-modal';
+import { checkAccess } from '../../../utils/check-access';
+import { ROLE } from '../../../constants/role';
 
-const CommentContainer = ({ className, id, commentProps }) => {
+const CommentContainer = ({ className, id, commentProps, roleId }) => {
 	const { postId, userName, content, publishedAt } = commentProps;
-
+	const isAdminOrModerator = checkAccess([ROLE.ADMIN, ROLE.MODERATOR], roleId);
 	const dispatch = useDispatch();
 	const requestServer = useServerRequest();
 	const onDeleteCommentButton = (id) => {
@@ -52,14 +54,19 @@ const CommentContainer = ({ className, id, commentProps }) => {
 
 				<div>{content}</div>
 			</div>
-			<Icon
-				id="fa-trash-o"
-				cursor="pointer"
-				size="21px"
-				onClick={() => {
-					onDeleteCommentButton(id);
-				}}
-			/>
+			{isAdminOrModerator ? (
+				<Icon
+					id="fa-trash-o"
+					cursor="pointer"
+					size="21px"
+					margin="0 5px 0 0"
+					onClick={() => {
+						onDeleteCommentButton(id);
+					}}
+				/>
+			) : (
+				<div className="placeholder"></div>
+			)}
 		</div>
 	);
 };
@@ -76,6 +83,7 @@ export const Comment = styled(CommentContainer)`
 		width: 100%;
 		padding: 5px;
 		border: 1px solid #000;
+		margin: 0 10px 0 0;
 	}
 
 	.information-panel {
@@ -88,5 +96,9 @@ export const Comment = styled(CommentContainer)`
 
 	.published-at {
 		display: flex;
+	}
+
+	.placeholder {
+		width: 22px;
 	}
 `;

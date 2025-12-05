@@ -41,6 +41,7 @@ const UserRowContainer = ({ className, roles, userProps, onDeleteUserButtonClick
 						id="fa-floppy-o"
 						margin=" 0 0 0 10px"
 						disabled={isSelectedButtonDisabled}
+						inActive={isSelectedButtonDisabled}
 						onClick={() => onSaveUserButtonClick(id, selectedRoleId)}
 					/>
 				</div>

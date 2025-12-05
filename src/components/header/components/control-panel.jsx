@@ -6,6 +6,7 @@ import { ROLE } from '../../../constants/role';
 import { selectUser } from '../../../selectors/select-user';
 import { useDispatch, useSelector } from 'react-redux';
 import { logout } from '../../../actions';
+import { checkAccess } from '../../../utils/check-access';
 
 const RightAligned = styled.div`
 	display: flex;
@@ -21,6 +22,8 @@ const UserLoginContainer = styled.div`
 
 const ControlPanelContainer = ({ className }) => {
 	const { login, roleId, session } = useSelector(selectUser);
+
+	const isAdmin = checkAccess([ROLE.ADMIN], roleId);
 
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
@@ -51,18 +54,17 @@ const ControlPanelContainer = ({ className }) => {
 				)}
 			</RightAligned>
 			<RightAligned>
-				<Icon
-					id="fa-backward"
-					margin="10px 0 0 0"
-					onClick={() => navigate(-1)}
-					cursor="pointer"
-				/>
-				<Link to="/posts">
-					<Icon id="fa-file-text-o" margin="10px 0 0 16px" />
-				</Link>
-				<Link to="/users">
-					<Icon id="fa-users" margin="10px 0 0 16px" />
-				</Link>
+				<Icon id="fa-backward" margin="10px 0 0 0" onClick={() => navigate(-1)} />
+				{isAdmin && (
+					<>
+						<Link to="/posts">
+							<Icon id="fa-file-text-o" margin="10px 0 0 16px" />
+						</Link>
+						<Link to="/users">
+							<Icon id="fa-users" margin="10px 0 0 16px" />
+						</Link>
+					</>
+				)}
 			</RightAligned>
 		</div>
 	);

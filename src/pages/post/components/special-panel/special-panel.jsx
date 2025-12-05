@@ -1,11 +1,14 @@
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/icon';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { openModal } from '../../../../actions/open-modal';
 import { closeModal } from '../../../../actions/close-modal';
 import { useServerRequest } from '../../../../hooks/use-server-request';
 import { removePostAsync } from '../../../../actions/remove-post-async';
 import { useNavigate } from 'react-router-dom';
+import { checkAccess } from '../../../../utils/check-access';
+import { ROLE } from '../../../../constants/role';
+import { selectUser } from '../../../../selectors/select-user';
 
 const SpecialPanelContainer = ({ className, postId, iconId, publishedAt, onClick }) => {
 	const dispatch = useDispatch();
@@ -26,6 +29,10 @@ const SpecialPanelContainer = ({ className, postId, iconId, publishedAt, onClick
 		);
 	};
 
+	const { roleId } = useSelector(selectUser);
+
+	const isAdmin = checkAccess([ROLE.ADMIN], roleId);
+
 	return (
 		<div className={className}>
 			<div className="published-at">
@@ -39,17 +46,19 @@ const SpecialPanelContainer = ({ className, postId, iconId, publishedAt, onClick
 				)}
 				{publishedAt}
 			</div>
-			<div className="buttons-panel">
-				<Icon id={iconId} size="21px" onClick={onClick} />
-				{publishedAt && (
-					<Icon
-						id="fa-trash-o"
-						margin="0 0 0 10px"
-						size="21px"
-						onClick={onDeletePost}
-					/>
-				)}
-			</div>
+			{isAdmin && (
+				<div className="buttons-panel">
+					<Icon id={iconId} size="21px" onClick={onClick} />
+					{publishedAt && (
+						<Icon
+							id="fa-trash-o"
+							margin="0 0 0 10px"
+							size="21px"
+							onClick={onDeletePost}
+						/>
+					)}
+				</div>
+			)}
 		</div>
 	);
 };

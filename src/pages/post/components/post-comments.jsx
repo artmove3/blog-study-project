@@ -6,9 +6,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { selectUser } from '../../../selectors/select-user';
 import { addCommentAsync } from '../../../actions/add-comment-async';
 import { useServerRequest } from '../../../hooks/use-server-request';
+import { checkAccess } from '../../../utils/check-access';
+import { ROLE } from '../../../constants/role';
 
 const PostCommentsContainer = ({ className, postId, comments }) => {
 	const [newComment, setNewComment] = useState('');
+	const { roleId } = useSelector(selectUser);
+	const isGuest = checkAccess([ROLE.GUEST], roleId);
 
 	const userName = useSelector(selectUser).login;
 	const dispatch = useDispatch();
@@ -20,19 +24,21 @@ const PostCommentsContainer = ({ className, postId, comments }) => {
 
 	return (
 		<div className={className}>
-			<div className="new-comment">
-				<textarea
-					value={newComment}
-					onChange={({ target }) => setNewComment(target.value)}
-					placeholder="Комментарий..."
-				></textarea>
-				<Icon
-					id="fa-paper-plane-o"
-					margin="0 0 0 10px"
-					size="21px"
-					onClick={() => onNewCommentAdd(postId, userName, newComment)}
-				/>
-			</div>
+			{!isGuest && (
+				<div className="new-comment">
+					<textarea
+						value={newComment}
+						onChange={({ target }) => setNewComment(target.value)}
+						placeholder="Комментарий..."
+					></textarea>
+					<Icon
+						id="fa-paper-plane-o"
+						margin="0 0 0 10px"
+						size="21px"
+						onClick={() => onNewCommentAdd(postId, userName, newComment)}
+					/>
+				</div>
+			)}
 
 			<div className="comments">
 				{comments.map((commentProps) => {
@@ -41,6 +47,7 @@ const PostCommentsContainer = ({ className, postId, comments }) => {
 							key={commentProps.id}
 							id={commentProps.id}
 							commentProps={commentProps}
+							roleId={roleId}
 						/>
 					);
 				})}

@@ -27,6 +27,13 @@
       "password": "1qa2ws3ed",
       "registered_at": "29.10.2025 05:17",
       "role_id": 2
+    },
+    {
+      "id": "1764753533765",
+      "login": "burden",
+      "password": "1q2w3e4r",
+      "registered_at": "03.12.2025 16:18",
+      "role_id": 2
     }
   ],
   "roles": [
@@ -128,11 +135,18 @@
       "id": 4
     },
     {
-      "user_name": "Mob",
-      "post_id": "003",
-      "content": "s sdyhgol;l ftyui",
-      "published_at": "28.11.2025 00:11",
-      "id": 5
+      "user_name": "burden",
+      "post_id": "004",
+      "content": "burden dispatching...",
+      "published_at": "03.12.2025 16:43",
+      "id": 6
+    },
+    {
+      "user_name": "burden",
+      "post_id": "001",
+      "content": "burden is here.",
+      "published_at": "03.12.2025 16:44",
+      "id": 7
     }
   ],
   "sessions": [
@@ -311,6 +325,17 @@
       },
       "hash": "0.47671206159324897022599998308578506112098693847656",
       "id": 16
+    },
+    {
+      "user": {
+        "id": "1759758477282",
+        "login": "Mob",
+        "password": "1qa2ws3ed",
+        "registeredAt": "2025-10-06 13:47",
+        "roleId": 1
+      },
+      "hash": "0.66296233004095783680753584121703170239925384521484",
+      "id": 17
     }
   ]
 }
