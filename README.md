@@ -1,3 +1,4 @@
-enter in separate terminals to start development:
+start json server:
 json-server --watch src/db.json --port 3004
-npm run dev
+
+Admin: Reigen qwerty123
