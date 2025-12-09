@@ -1,8 +1,10 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon } from '../../../components/icon/icon';
 import { TableRow } from './table-row';
 import { useState } from 'react';
 import { useServerRequest } from '../../../hooks/use-server-request';
+import { PROP_TYPE } from '../../../constants/prop-type';
 
 const UserRowContainer = ({ className, roles, userProps, onDeleteUserButtonClick }) => {
 	const { id, login, registeredAt, roleId: userRoleId } = userProps;
@@ -72,3 +74,9 @@ export const UserRow = styled(UserRowContainer)`
 		border: 1px solid #000;
 	}
 `;
+
+UserRow.propTypes = {
+	roles: PropTypes.arrayOf(PROP_TYPE.ROLE).isRequired,
+	userProps: PROP_TYPE.USER,
+	onDeleteUserButtonClick: PropTypes.func.isRequired,
+};

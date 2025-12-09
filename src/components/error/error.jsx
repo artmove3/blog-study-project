@@ -1,5 +1,7 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { H2 } from '../h2/h2';
+import { PROP_TYPE } from '../../constants/prop-type';
 
 const ErrorContainer = ({ className, error }) => {
 	return (
@@ -14,3 +16,7 @@ export const Error = styled(ErrorContainer)`
 	flex-direction: column;
 	align-items: center;
 `;
+
+Error.propTypes = {
+	error: PROP_TYPE.ERROR,
+};

@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon } from '../../../components/icon/icon';
 import { useDispatch } from 'react-redux';
@@ -7,6 +8,7 @@ import { openModal } from '../../../actions/open-modal';
 import { closeModal } from '../../../actions/close-modal';
 import { checkAccess } from '../../../utils/check-access';
 import { ROLE } from '../../../constants/role';
+import { PROP_TYPE } from '../../../constants/prop-type';
 
 const CommentContainer = ({ className, id, commentProps, roleId }) => {
 	const { postId, userName, content, publishedAt } = commentProps;
@@ -102,3 +104,14 @@ export const Comment = styled(CommentContainer)`
 		width: 22px;
 	}
 `;
+
+Comment.propTypes = {
+	id: PropTypes.number.isRequired,
+	commentProps: PropTypes.shape({
+		postId: PropTypes.string.isRequired,
+		userName: PropTypes.string.isRequired,
+		content: PropTypes.string.isRequired,
+		publishedAt: PropTypes.string.isRequired,
+	}),
+	roleId: PROP_TYPE.ROLE,
+};

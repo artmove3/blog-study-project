@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import { Icon } from '../../../../components/icon/icon';
 import { useDispatch, useSelector } from 'react-redux';
@@ -40,7 +41,7 @@ const SpecialPanelContainer = ({ className, postId, iconId, publishedAt, onClick
 					<Icon
 						id="fa-calendar-o"
 						margin="0 10px 0 0"
-						font-size="18px"
+						size="18px"
 						inActive={true}
 					/>
 				)}
@@ -82,3 +83,10 @@ export const SpecialPanel = styled(SpecialPanelContainer)`
 		top: -4px;
 	}
 `;
+
+SpecialPanel.propTypes = {
+	postId: PropTypes.string.isRequired,
+	iconId: PropTypes.string.isRequired,
+	publishedAt: PropTypes.string.isRequired,
+	onClick: PropTypes.func.isRequired,
+};

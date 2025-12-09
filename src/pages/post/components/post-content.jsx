@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { H2 } from '../../../components/h2/h2';
 import { SpecialPanel } from './special-panel/special-panel';
 import { useNavigate } from 'react-router-dom';
+import { PROP_TYPE } from '../../../constants/prop-type';
 
 const PostContentContainer = ({ className, post }) => {
 	const { id, title, imageUrl, content, publishedAt } = post;
@@ -35,3 +36,7 @@ export const PostContent = styled(PostContentContainer)`
 		font-size: 18px;
 	}
 `;
+
+PostContent.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};

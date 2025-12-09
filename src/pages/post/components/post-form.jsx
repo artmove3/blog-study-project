@@ -7,6 +7,7 @@ import { useDispatch } from 'react-redux';
 import { savePostAsync } from '../../../actions/save-post-async';
 import { useNavigate } from 'react-router-dom';
 import { useServerRequest } from '../../../hooks/use-server-request';
+import { PROP_TYPE } from '../../../constants/prop-type';
 
 const PostFormContainer = ({ className, post }) => {
 	const { id, title, imageUrl, content, publishedAt } = post;
@@ -28,6 +29,7 @@ const PostFormContainer = ({ className, post }) => {
 
 	const onSave = () => {
 		const newContent = sanitizeContent(contentRef.current.innerHTML);
+		if (!newContent) return;
 		// при создании новой статьи id берется из response после отработки fetch с методом POST
 		dispatch(
 			savePostAsync(requestServer, {
@@ -85,3 +87,7 @@ export const PostForm = styled(PostFormContainer)`
 		border: 1px solid #000;
 	}
 `;
+
+PostForm.propTypes = {
+	post: PROP_TYPE.POST.isRequired,
+};
