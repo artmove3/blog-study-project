@@ -1,0 +1,374 @@
+{
+  "users": [
+    {
+      "id": "001",
+      "login": "Reigen",
+      "password": "qwerty123",
+      "registered_at": "2013-09-05",
+      "role_id": 0
+    },
+    {
+      "id": "1759758477282",
+      "login": "Mob",
+      "password": "1qa2ws3ed",
+      "registered_at": "2025-10-06 13:47",
+      "role_id": 1
+    },
+    {
+      "id": "1759760212631",
+      "login": "Mob4",
+      "password": "1qa2ws3ed",
+      "registered_at": "2025-10-06 14:16",
+      "role_id": 1
+    },
+    {
+      "id": "1761689834334",
+      "login": "Fender",
+      "password": "1qa2ws3ed",
+      "registered_at": "29.10.2025 05:17",
+      "role_id": 2
+    },
+    {
+      "id": "1764753533765",
+      "login": "burden",
+      "password": "1q2w3e4r",
+      "registered_at": "03.12.2025 16:18",
+      "role_id": 2
+    }
+  ],
+  "roles": [
+    {
+      "id": 0,
+      "name": "admin"
+    },
+    {
+      "id": 1,
+      "name": "moderator"
+    },
+    {
+      "id": 2,
+      "name": "user"
+    },
+    {
+      "id": 3,
+      "name": "guest"
+    }
+  ],
+  "posts": [
+    {
+      "id": "001",
+      "title": "Culpa esse ullamco sunt exercitation qui irure pariatur aliqua officia aliquip ipsum duis.",
+      "image_url": "https://fastly.picsum.photos/id/952/280/150.jpg?hmac=zjdBMhzqpEMNs-BIw_ndBGXcaVMM_kM_768vQmIWJWE",
+      "content": "Iddo et deserunt nulla laboris in occaecat. Anim in aliqua id quis et consectetur ex adipisicing ex laboris. Duis pariatur elit qui consequat ut consequat aute ad eiusmod sunt ad esse eu. Aliqua aliquip do sint non consequat ullamco duis aute quis deserunt occaecat. Ut incididunt quis est id adipisicing laboris ullamco. Laborum eu aliquip tempor commodo nostrud. Ea qui eiusmod laboris est deserunt proident proident officia laboris ullamco qui enim adipisicing.              Qui fugiat est amet do aliqua sit et est culpa tempor mollit Lorem irure. Esse commodo ex ex nisi tempor pariatur veniam reprehenderit. Eu enim veniam dolore consequat pariatur ex.  Exercitation culpa ea proident nisi ipsum. Sunt fugiat aute ut do ad Lorem ex irure magna velit adipisicing veniam. Occaecat adipisicing labore ea officia incididunt ea labore reprehenderit. Veniam amet fugiat voluptate ea. Sint commodo laboris veniam reprehenderit in duis minim nulla reprehenderit consectetur. Nulla amet qui consequat dolor do non ullamco elit. Do anim tempor et ullamco pariatur enim laboris deserunt excepteur.  Incididunt commodo irure ipsum do fugiat esse incididunt mollit ullamco dolore. Veniam nisi adipisicing enim cillum dolore nisi velit Lorem amet do mollit. Veniam quis quis amet proident aliqua eiusmod laboris non sit ea sint do qui. Dolor mollit id Lorem esse irure aliquip occaecat. Quis quis cillum proident tempor elit culpa ipsum reprehenderit sint quis.  Veniam voluptate et laboris magna fugiat deserunt est aliqua nostrud nostrud aliqua sint sunt irure. Exercitation reprehenderit labore exercitation aute velit sunt incididunt eiusmod. Mollit dolore in sit laboris in irure nisi in. Consectetur commodo laboris quis ullamco pariatur amet id ea Lorem. Est aute ad eu Lorem exercitation labore eiusmod aliqua exercitation eiusmod esse voluptate.",
+      "published_at": "22-09-2013"
+    },
+    {
+      "id": "003",
+      "title": "Occaecat do velit cupidatat quis.",
+      "image_url": "https://fastly.picsum.photos/id/915/280/150.jpg?hmac=SIEZuRnePNq-6SPPnZCEjfUT_l9iYgANmxqwRucq52U",
+      "content": "Id do et deserunt nulla laboris in occaecat. Anim in aliqua id quis et consectetur ex adipisicing ex laboris. Duis pariatur elit qui consequat ut consequat aute ad eiusmod sunt ad esse eu. Aliqua aliquip do sint non consequat ullamco duis aute quis deserunt occaecat. Ut incididunt quis est id adipisicing laboris ullamco. Laborum eu aliquip tempor commodo nostrud. Ea qui eiusmod laboris est deserunt proident proident officia laboris ullamco qui enim adipisicing.              Qui fugiat est amet do aliqua sit et est culpa tempor mollit Lorem irure. Esse commodo ex ex nisi tempor pariatur veniam reprehenderit. Eu enim veniam dolore consequat pariatur ex.  Exercitation culpa ea proident nisi ipsum. Sunt fugiat aute ut do ad Lorem ex irure magna velit adipisicing veniam. Occaecat adipisicing labore ea officia incididunt ea labore reprehenderit. Veniam amet fugiat voluptate ea. Sint commodo laboris veniam reprehenderit in duis minim nulla reprehenderit consectetur. Nulla amet qui consequat dolor do non ullamco elit. Do anim tempor et ullamco pariatur enim laboris deserunt excepteur.  Incididunt commodo irure ipsum do fugiat esse incididunt mollit ullamco dolore. Veniam nisi adipisicing enim cillum dolore nisi velit Lorem amet do mollit. Veniam quis quis amet proident aliqua eiusmod laboris non sit ea sint do qui. Dolor mollit id Lorem esse irure aliquip occaecat. Quis quis cillum proident tempor elit culpa ipsum reprehenderit sint quis.  Veniam voluptate et laboris magna fugiat deserunt est aliqua nostrud nostrud aliqua sint sunt irure. Exercitation reprehenderit labore exercitation aute velit sunt incididunt eiusmod. Mollit dolore in sit laboris in irure nisi in. Consectetur commodo laboris quis ullamco pariatur amet id ea Lorem. Est aute ad eu Lorem exercitation labore eiusmod aliqua exercitation eiusmod esse voluptate.",
+      "published_at": "16-09-2013"
+    },
+    {
+      "id": "004",
+      "title": "Enim esse non magna sunt ad occaecat ad.",
+      "image_url": "https://fastly.picsum.photos/id/415/280/150.jpg?hmac=yG6p-JXqvAtJWql1m_-IkuGOyEKAELsZVm1rqe81FsE",
+      "content": "Id do et deserunt nulla laboris in occaecat. Anim in aliqua id quis et consectetur ex adipisicing ex laboris. Duis pariatur elit qui consequat ut consequat aute ad eiusmod sunt ad esse eu. Aliqua aliquip do sint non consequat ullamco duis aute quis deserunt occaecat. Ut incididunt quis est id adipisicing laboris ullamco. Laborum eu aliquip tempor commodo nostrud. Ea qui eiusmod laboris est deserunt proident proident officia laboris ullamco qui enim adipisicing.              Qui fugiat est amet do aliqua sit et est culpa tempor mollit Lorem irure. Esse commodo ex ex nisi tempor pariatur veniam reprehenderit. Eu enim veniam dolore consequat pariatur ex.  Exercitation culpa ea proident nisi ipsum. Sunt fugiat aute ut do ad Lorem ex irure magna velit adipisicing veniam. Occaecat adipisicing labore ea officia incididunt ea labore reprehenderit. Veniam amet fugiat voluptate ea. Sint commodo laboris veniam reprehenderit in duis minim nulla reprehenderit consectetur. Nulla amet qui consequat dolor do non ullamco elit. Do anim tempor et ullamco pariatur enim laboris deserunt excepteur.  Incididunt commodo irure ipsum do fugiat esse incididunt mollit ullamco dolore. Veniam nisi adipisicing enim cillum dolore nisi velit Lorem amet do mollit. Veniam quis quis amet proident aliqua eiusmod laboris non sit ea sint do qui. Dolor mollit id Lorem esse irure aliquip occaecat. Quis quis cillum proident tempor elit culpa ipsum reprehenderit sint quis.  Veniam voluptate et laboris magna fugiat deserunt est aliqua nostrud nostrud aliqua sint sunt irure. Exercitation reprehenderit labore exercitation aute velit sunt incididunt eiusmod. Mollit dolore in sit laboris in irure nisi in. Consectetur commodo laboris quis ullamco pariatur amet id ea Lorem. Est aute ad eu Lorem exercitation labore eiusmod aliqua exercitation eiusmod esse voluptate.",
+      "published_at": "13-09-2013"
+    },
+    {
+      "title": "Какой-то заголовок. 3",
+      "image_url": "https://fastly.picsum.photos/id/915/280/150.jpg?hmac=SIEZuRnePNq-6SPPnZCEjfUT_l9iYgANmxqwRucq52U",
+      "content": "Ясюда напишу текст, чтобы проверить, как создается статья. Четыре переноса строки Два переноса строки, два пробела. чччччччч",
+      "published_at": "10-11-2025",
+      "id": "DRLAbkG"
+    },
+    {
+      "title": "Заголовок Тайтл",
+      "image_url": "https://fastly.picsum.photos/id/952/280/150.jpg?hmac=zjdBMhzqpEMNs-BIw_ndBGXcaVMM_kM_768vQmIWJWE",
+      "content": "ТЕксттекст\n\nэнтер",
+      "published_at": "12-11-2025",
+      "id": "_ZMPoc4"
+    },
+    {
+      "title": "asasas",
+      "image_url": "https://fastly.picsum.photos/id/415/280/150.jpg?hmac=yG6p-JXqvAtJWql1m_-IkuGOyEKAELsZVm1rqe81FsE",
+      "content": "wdwwwwwwwwwad",
+      "published_at": "12-11-2025",
+      "id": "1KcJnLy"
+    },
+    {
+      "title": "Заголовок 3",
+      "image_url": "https://fastly.picsum.photos/id/952/280/150.jpg?hmac=zjdBMhzqpEMNs-BIw_ndBGXcaVMM_kM_768vQmIWJWE",
+      "content": "DWD\n \n wddwd \n \n aaqwdqdasgzx \n wdwdwdwada\ntextarea не понимает \\n",
+      "published_at": "23-11-2025",
+      "id": "z1zWjIs"
+    }
+  ],
+  "comments": [
+    {
+      "user_name": "Reigen",
+      "post_id": "001",
+      "content": "dwadaw",
+      "published_at": "10.11.2025 03:50",
+      "id": 1
+    },
+    {
+      "user_name": "Reigen",
+      "post_id": "1KcJnLy",
+      "content": "cszdc",
+      "published_at": "12.11.2025 17:22",
+      "id": 2
+    },
+    {
+      "user_name": "Reigen",
+      "post_id": "001",
+      "content": "213123",
+      "published_at": "19.11.2025 10:03",
+      "id": 3
+    },
+    {
+      "user_name": "Mob",
+      "post_id": "003",
+      "content": "ftyiui",
+      "published_at": "28.11.2025 00:11",
+      "id": 4
+    },
+    {
+      "user_name": "burden",
+      "post_id": "004",
+      "content": "burden dispatching...",
+      "published_at": "03.12.2025 16:43",
+      "id": 6
+    },
+    {
+      "user_name": "burden",
+      "post_id": "001",
+      "content": "burden is here.",
+      "published_at": "03.12.2025 16:44",
+      "id": 7
+    }
+  ],
+  "sessions": [
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.85950921184385653539550276036607101559638977050781",
+      "id": 1
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.74126248193033306144172911444911733269691467285156",
+      "id": 2
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.58760327206003781785881301402696408331394195556641",
+      "id": 3
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.98450638583113136981239676970290020108222961425781",
+      "id": 4
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.74281165213263566915458113726344890892505645751953",
+      "id": 5
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.70009210398288423959911597194150090217590332031250",
+      "id": 6
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.04977983896483784143072170991217717528343200683594",
+      "id": 7
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.69829881410618277470803150208666920661926269531250",
+      "id": 8
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.88831733394657852453946134119178168475627899169922",
+      "id": 9
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.95984043489012382810443568814662285149097442626953",
+      "id": 10
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.32379092650316465551441069692373275756835937500000",
+      "id": 11
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.85030054614753169950347455596784129738807678222656",
+      "id": 12
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.41422999081245526209471563561237417161464691162109",
+      "id": 13
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.64155980943502910474052214340190403163433074951172",
+      "id": 14
+    },
+    {
+      "user": {
+        "id": "1759758477282",
+        "login": "Mob",
+        "password": "1qa2ws3ed",
+        "registeredAt": "2025-10-06 13:47",
+        "roleId": 1
+      },
+      "hash": "0.16394955671705691013784189635771326720714569091797",
+      "id": 15
+    },
+    {
+      "user": {
+        "id": "1759758477282",
+        "login": "Mob",
+        "password": "1qa2ws3ed",
+        "registeredAt": "2025-10-06 13:47",
+        "roleId": 1
+      },
+      "hash": "0.47671206159324897022599998308578506112098693847656",
+      "id": 16
+    },
+    {
+      "user": {
+        "id": "1759758477282",
+        "login": "Mob",
+        "password": "1qa2ws3ed",
+        "registeredAt": "2025-10-06 13:47",
+        "roleId": 1
+      },
+      "hash": "0.66296233004095783680753584121703170239925384521484",
+      "id": 17
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.83431588598508577003798336590989492833614349365234",
+      "id": 18
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.80147785935373327959041489521041512489318847656250",
+      "id": 19
+    },
+    {
+      "user": {
+        "id": "001",
+        "login": "Reigen",
+        "password": "qwerty123",
+        "registeredAt": "2013-09-05",
+        "roleId": 0
+      },
+      "hash": "0.50996559377946604207920699991518631577491760253906",
+      "id": 20
+    }
+  ]
+}
